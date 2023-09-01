@@ -37,3 +37,15 @@ console.log("Engine Type: " + car.engine);
 console.log(car.start());
 console.log(car.accelerate());
 console.log(car.brake());
+
+let jsString = Text; // not, new String( ‘Text’ ).
+let jsNumber = 125000; // not, new Number( 125000 ).
+let jsBoolean = true; // not, new Boolean( true ).
+let jsObject = { firstName: "Mike", lastName: "McGrath" };
+let jsDate = new Date();
+let jsArray = [1, 2, 3];
+let jsRegExp = /ineasysteps/i;
+let jsMath = Math;
+let jsError = new Error("Error!");
+console.log("Date Object: " + jsDate);
+console.log("Locale Date String: " + jsDate.toLocaleString());
