@@ -110,3 +110,32 @@ console.log("Reversed Sort: " + nums.reverse());
 function sortNums(numOne, numTwo) {
   return numOne - numTwo;
 }
+
+const now = new Date();
+let offset = now.getTimezoneOffset();
+let dst = 60;
+if (now.getMonth() < 3 && now.getDate() < 10) {
+  dst = 0;
+}
+if (now.getMonth() > 9 && now.getDate() > 2) {
+  dst = 0;
+}
+switch (offset) {
+  case 300 - dst:
+    offset = "East Coast";
+    break;
+  case 360 - dst:
+    offset = "Central";
+    break;
+  case 420 - dst:
+    offset = "Mountain";
+    break;
+  case 480 - dst:
+    offset = "Pacific";
+    break;
+  default:
+    offset = "All";
+}
+console.log("System Time: " + now.toString());
+console.log("UTC (GMT) Time: " + now.toUTCString());
+console.log("\nWelcome to " + offset + " Visitors");
