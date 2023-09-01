@@ -54,15 +54,15 @@ let jsArray = new Array(10);
 console.log(jsArray[0]);
 console.log(jsArray);
 
-let month,
-  summer = ["June", "July", "August"];
-for (month in summer) {
-  if (month !== "") {
-    console.log(month + ": " + summer[month]);
-  }
-}
-console.log("Start of Summer: " + summer[0]);
-console.log(summer);
+// let month,
+//   summer = ["June", "July", "August"];
+// for (month in summer) {
+//   if (month !== "") {
+//     console.log(month + ": " + summer[month]);
+//   }
+// }
+// console.log("Start of Summer: " + summer[0]);
+// console.log(summer);
 
 let i,
   result,
@@ -111,31 +111,58 @@ function sortNums(numOne, numTwo) {
   return numOne - numTwo;
 }
 
+// const now = new Date();
+// let offset = now.getTimezoneOffset();
+// let dst = 60;
+// if (now.getMonth() < 3 && now.getDate() < 10) {
+//   dst = 0;
+// }
+// if (now.getMonth() > 9 && now.getDate() > 2) {
+//   dst = 0;
+// }
+// switch (offset) {
+//   case 300 - dst:
+//     offset = "East Coast";
+//     break;
+//   case 360 - dst:
+//     offset = "Central";
+//     break;
+//   case 420 - dst:
+//     offset = "Mountain";
+//     break;
+//   case 480 - dst:
+//     offset = "Pacific";
+//     break;
+//   default:
+//     offset = "All";
+// }
+// console.log("System Time: " + now.toString());
+// console.log("UTC (GMT) Time: " + now.toUTCString());
+// console.log("\nWelcome to " + offset + " Visitors");
+
+const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 const now = new Date();
-let offset = now.getTimezoneOffset();
-let dst = 60;
-if (now.getMonth() < 3 && now.getDate() < 10) {
-  dst = 0;
-}
-if (now.getMonth() > 9 && now.getDate() > 2) {
-  dst = 0;
-}
-switch (offset) {
-  case 300 - dst:
-    offset = "East Coast";
-    break;
-  case 360 - dst:
-    offset = "Central";
-    break;
-  case 420 - dst:
-    offset = "Mountain";
-    break;
-  case 480 - dst:
-    offset = "Pacific";
-    break;
-  default:
-    offset = "All";
-}
-console.log("System Time: " + now.toString());
-console.log("UTC (GMT) Time: " + now.toUTCString());
-console.log("\nWelcome to " + offset + " Visitors");
+let year = now.getFullYear();
+let month = now.getMonth();
+let dayNumber = now.getDate();
+let dayName = now.getDay();
+month = months[month];
+dayName = days[dayName];
+let usDate = dayName + ", " + month + "" + dayNumber + ", " + year;
+let ukDate = dayName + ", " + dayNumber + "" + month + ", " + year;
+console.log("U.S. Date: " + usDate);
+console.log("U.K. Date: " + ukDate);
