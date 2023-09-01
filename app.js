@@ -38,14 +38,28 @@ console.log(car.start());
 console.log(car.accelerate());
 console.log(car.brake());
 
-let jsString = Text; // not, new String( ‘Text’ ).
-let jsNumber = 125000; // not, new Number( 125000 ).
-let jsBoolean = true; // not, new Boolean( true ).
-let jsObject = { firstName: "Mike", lastName: "McGrath" };
-let jsDate = new Date();
-let jsArray = [1, 2, 3];
-let jsRegExp = /ineasysteps/i;
-let jsMath = Math;
-let jsError = new Error("Error!");
-console.log("Date Object: " + jsDate);
-console.log("Locale Date String: " + jsDate.toLocaleString());
+// let jsString = Text; // not, new String( ‘Text’ ).
+// let jsNumber = 125000; // not, new Number( 125000 ).
+// let jsBoolean = true; // not, new Boolean( true ).
+// let jsObject = { firstName: "Mike", lastName: "McGrath" };
+// let jsDate = new Date();
+// let jsArray = [1, 2, 3];
+// let jsRegExp = /ineasysteps/i;
+// let jsMath = Math;
+// let jsError = new Error("Error!");
+// console.log("Date Object: " + jsDate);
+// console.log("Locale Date String: " + jsDate.toLocaleString());
+
+let jsArray = new Array(10);
+console.log(jsArray[0]);
+console.log(jsArray);
+
+let month,
+  summer = ["June", "July", "August"];
+for (month in summer) {
+  if (month !== "") {
+    console.log(month + ": " + summer[month]);
+  }
+}
+console.log("Start of Summer: " + summer[0]);
+console.log(summer);
