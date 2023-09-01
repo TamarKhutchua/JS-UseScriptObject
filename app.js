@@ -98,3 +98,15 @@ console.log("Elements: " + seasons);
 console.log("Sliced: " + seasons.slice(1, 3));
 console.log("Spliced: " + seasons.splice(2, 1, "Autumn"));
 console.log("Elements: " + seasons);
+
+let hues = ["Red", "RED", "red", "Green", "Blue"];
+let nums = [1, 20, 3, 17, 14, 0.5];
+console.log("Colors: " + hues);
+console.log("Dictionary Sort: " + hues.sort());
+console.log("\nNumbers: " + nums);
+console.log("Dictionary Sort: " + nums.sort());
+console.log("Numerical Sort: " + nums.sort(sortNums));
+console.log("Reversed Sort: " + nums.reverse());
+function sortNums(numOne, numTwo) {
+  return numOne - numTwo;
+}
